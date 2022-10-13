@@ -1,7 +1,14 @@
 import { FC, useMemo } from "react";
 import { Step } from "./Step/Step";
 
-export const Fraction: FC<{color: string, fraction: number, height: number, width: number}> = ({width, height, color, fraction}) => {
+interface IFraction {
+    color: string
+    fraction: number
+    height: number
+    width: number
+}
+
+export const Fraction: FC<IFraction> = ({width, height, color, fraction}) => {
     const stepsArr = useMemo(() => {
         
         const arr = []

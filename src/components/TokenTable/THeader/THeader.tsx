@@ -1,8 +1,15 @@
 import { FC, memo } from "react";
-import { TokenTableFiltres } from "../../../shared/types/tokenTable.types";
+import { SetFilter, TokenTableFiltres } from "../../../shared/types/tokenTable.types";
 import { THeaderCell } from "./THeaderCell/THeaderCell";
 
-export const THeader: FC<{setCurrentFilters: any, sort: string, filters: TokenTableFiltres, setSortBy: any}> = memo(({setCurrentFilters, filters, setSortBy, sort}) => {
+interface ITHeader {
+    setCurrentFilters: SetFilter
+    sort: string 
+    filters: TokenTableFiltres
+    setSortBy: (strSort: string) => void
+}
+
+export const THeader: FC<ITHeader> = memo(({setCurrentFilters, filters, setSortBy, sort}) => {
 
     return (
         <thead>

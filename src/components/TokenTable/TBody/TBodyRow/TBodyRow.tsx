@@ -9,7 +9,6 @@ export const TBodyRow: FC<{item: TokenTableItem, onBuy: (item: TokenTableItem) =
     return ( 
         <tr data-status={item.status} className={style.tbodyTr} onClick={(e) => {
             if (e.target === ref.current) return
-            console.log('Поихал на ', item.id)
             window.history.pushState({}, '', `/project/${item.id}`)
         }}>
             <td className={style.tbodyTd}>
@@ -23,7 +22,6 @@ export const TBodyRow: FC<{item: TokenTableItem, onBuy: (item: TokenTableItem) =
                 {item.conditions}
             </td>
             <td className={style.tbodyTd}>
-                {/* {`$ ${item.volume}`} */}
                 {item.volume.toLocaleString('en', {
                     style: 'currency',
                     currency: 'USD',
