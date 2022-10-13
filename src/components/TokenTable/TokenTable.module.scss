@@ -1,0 +1,147 @@
+$redStatus: #fff6f7;
+$greenStatus: #f1fef3;
+$yellowStatus: #fdffe5;
+$purple: #b414b2;
+$grey: #a8a7a7;
+$bs: 0 3px 6px -4px #0000001f, 0 6px 16px #00000014, 0 9px 28px 8px #0000000d;
+
+.tokenTable {
+    border-spacing: 0;
+    width: 100%;
+
+    .theadTh {
+        padding: 16px 20px;
+        color: $grey;
+        text-align: start;
+
+        
+        & span {
+            cursor: pointer;
+        }
+    }
+
+    .tbodyTr {
+        cursor: pointer;
+    }
+    
+    .tbodyTr[data-status='green'] {
+        background: $greenStatus;
+
+        &:hover {
+            background: #dbffe0;
+        }
+    }
+    
+    .tbodyTr[data-status='red'] {
+        background: $redStatus;
+
+        &:hover {
+            background: #ffe4e7;
+        }
+    }
+    
+    .tbodyTr[data-status='yellow'] {
+        background: $yellowStatus;
+
+        &:hover {
+            background: #f5facc;
+        }
+    }
+
+    .tbodyTr td:first-child {
+        display: flex;
+    }
+    
+    .tbodyTd {
+        padding: 16px;
+    }
+
+    .tbodyTrButton {
+        border-radius: 6px;
+        background: white;
+        color: $purple;
+        border: 1px solid $purple;
+        padding: 4px 10px;
+        cursor: pointer;
+
+        &:hover {
+            background: $purple;
+            color: white;
+        }
+    }
+
+    .modalSelect {
+        color: #000;
+        font-size: 13px;
+        width: 110px;
+        padding: 5px 10px;
+        height: 110px;
+        background: white;
+        box-shadow: $bs;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .modalSelectInner {
+            display: flex;
+            flex-direction: column;
+
+            & .modalSelectInputsAndLabels {
+                display: flex;
+                flex-direction: column;
+
+                & .inputsLabels {
+                    margin-bottom: 5px;
+
+                    & label {
+                        font-weight: normal;
+                        width: 100%;
+                        text-align: start;
+                        cursor: pointer;
+                    }
+                }
+            }
+            
+            & div {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+
+        & .modalSelectButton {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    .modalSearch {
+        color: #000;
+        width: 160px;
+        padding: 10px 10px 5px;
+        height: 75px;
+        background: white;
+        box-shadow: $bs;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        & input {
+            width: 140px;
+            outline: none;
+            border: 1px solid rgb(49, 126, 172);
+            font-size: 12px;
+            padding: 3px;
+            border-radius: 3px;
+
+            &:focus {
+                border-color: rgb(126, 147, 197);
+            }
+        }
+
+        & .modalSearchButton {
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
+

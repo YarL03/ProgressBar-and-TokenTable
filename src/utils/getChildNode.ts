@@ -1,0 +1,1 @@
+export const getChildNodes: (elem: any) => any = (elem) => elem.childNodes

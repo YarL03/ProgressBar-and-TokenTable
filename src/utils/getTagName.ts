@@ -1,0 +1,1 @@
+export const getTagName: (elem: any) => any = (elem) => elem.tagName 

@@ -1,0 +1,1 @@
+export const getOffsetLeft: (ref: any) => any = (ref) => ref.current.offsetLeft

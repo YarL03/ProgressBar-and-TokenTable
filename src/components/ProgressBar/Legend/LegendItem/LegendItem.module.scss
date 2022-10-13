@@ -1,0 +1,11 @@
+.legendItem {
+    display: flex;
+   
+    *:not(:last-child) {
+        margin-right: 5px;
+    }
+
+    .text {
+        font-size: 0.85rem;
+    }
+}
