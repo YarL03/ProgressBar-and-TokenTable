@@ -8,10 +8,6 @@ const TokenTable: FC<ITokenTable> = ({items, filters, onSort, onBuy, onFilter, h
     const [sortBy, setSortBy] = useState(headerSorted ?? null)
     const [currentFilters, setCurrentFilters] = useState(filters)
 
-    useEffect(() => {
-        setSortBy(headerSorted)
-    }, [headerSorted])
-
     return (
         <div >
             <div className={style.tableContainer}>
