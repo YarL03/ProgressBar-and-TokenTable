@@ -9,8 +9,9 @@ function App() {
   return (
       <Layout>
         <ProgressBar items={itemsForProgressBar} />
-        <div>____</div>
-        <TokenTable onFilter={() => {}} filters={{status: 'green', type: 'TRST'}} headerSorted="-volume" onSort={onSort} items={itemsForTokenTable} onBuy={(item) => {alert(`/project/${item.id}`)}}/>
+        <div>______________________________</div>
+        <TokenTable onFilter={() => {}} filters={{status: 'green', type: 'TRST'}} 
+          headerSorted="-volume" onSort={onSort} items={itemsForTokenTable} onBuy={(item) => {alert(`/project/${item.id}`)}}/>
       </Layout>
   );
 }

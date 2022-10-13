@@ -14,7 +14,6 @@ const TokenTable: FC<ITokenTable> = ({items, filters, onSort, onBuy, onFilter, h
 
     return (
         <div >
-            Table
             <div className={style.tableContainer}>
                 <table className={style.tokenTable}>
                     <THeader sort={sortBy} filters={currentFilters} setCurrentFilters={setCurrentFilters} setSortBy={setSortBy}/>
